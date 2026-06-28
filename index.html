@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.0) 100%),
+                        url("img1.jpg") center bottom / cover no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: transparent;
+            z-index: 10;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 5px;
+        }
+
+        .logo img {
+            height: 40px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .about-link {
+            color: black;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 5px;
+        }
+
+        .about-link:hover {
+            text-decoration: underline;
+        }
+
+        .center-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            text-align: center;
+            color: black;
+            z-index: 5;
+            padding: 0 20px;
+            max-width: 900px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .center-content h1 {
+            margin: 24px 0px 32px;
+            font-size: 3.5rem;
+            line-height: 1.1;
+        }
+
+        .center-content .sub-text {
+            display: block;
+            margin: 6px auto;
+            font-size: 1.8rem;
+            font-weight: 400;
+            max-width: 650px;
+
+            text-align: justify;
+            overflow-wrap: break-word;
+        }
+        
+        .center-content .sub-text:first-of-type {
+            margin-top: 35px;
+        }
+
+        .center-content .sub-text:last-of-type {
+            margin-bottom: 10px;
+        }
+
+        .center-content .link-wrapper {
+            margin: 0;
+            margin-top: 32px;
+        }
+
+        .center-content a {
+            font-size: 2.7rem;
+            color: black;
+            text-decoration: underline;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        @media (max-width: 600px) {
+            html, body {
+                overflow: auto; 
+            }
+
+            header {
+                padding: 0 15px;
+            }
+
+            .logo img {
+                height: 32px;
+            }
+
+            .center-content {
+                width: 90%;
+                padding: 0;
+                transform: translate(-50%, -70%);
+            }
+
+            .center-content h1 {
+                font-size: 2.2rem;
+                line-height: 1.15;
+            }
+
+            .center-content .sub-text {
+                width: 100%;
+                font-size: 1.15rem;
+                text-align: center;
+            }
+
+            .about-link {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="На главную">
+                <img src="img2.jpg" alt="Логотип Z54">
+            </a>
+        </div>
+
+        <a href="about.html" class="about-link">
+            О нас
+        </a>
+    </header>
+
+    <main class="center-content">
+
+        <h1>Мы — команда Z54</h1>
+
+        <p class="sub-text">Играем вместе, побеждаем без компромиссов и сомнений. Если уверен в себе и готов играть в команде — заполняй к нам анкету!</p>
+
+        <div class="link-wrapper">
+            <a href="ask.html">
+                Заполнить анкету
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
